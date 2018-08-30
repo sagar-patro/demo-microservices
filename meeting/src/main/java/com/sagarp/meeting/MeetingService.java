@@ -1,0 +1,34 @@
+package com.sagarp.meeting;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class MeetingService {
+	@Autowired
+	private MeetingRepository repository;
+
+	public List<Meeting> getAllMeetings() {
+		List<Meeting> allMeetings = new ArrayList<Meeting>();
+		repository.findAll().forEach(allMeetings::add);
+		return allMeetings;
+	}
+
+	public Boolean saveMeeting(Meeting meeting) {
+		try {
+			repository.save(meeting);
+		} catch (Exception e) {
+			return false;
+		}
+		return true;
+	}
+
+	public Meeting getMeetingById(long id) {
+		Meeting meeting;
+		meeting = repository.findById(id).filter(m -> m.getId() == id).get();
+		return meeting;
+	}
+}

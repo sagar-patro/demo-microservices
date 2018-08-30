@@ -1,0 +1,5 @@
+package com.sagarp.employeejpa;
+
+public class EmployeeRegistry {
+
+}

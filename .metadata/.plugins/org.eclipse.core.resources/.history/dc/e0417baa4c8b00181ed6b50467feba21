@@ -1,0 +1,10 @@
+package com.sagarp.employeejpa;
+
+@Entity
+@Table(name = "employeeregistry")
+public class EmployeeRegistry {
+private long id;
+private String name;
+private long salary;
+private String depaartment;
+}

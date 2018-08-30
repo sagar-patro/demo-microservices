@@ -1,0 +1,10 @@
+zuul:
+  routes:
+    meeting: /meeting/**
+    
+ribbon:
+  eureka:
+    enabled: false
+
+server:
+  port: 8085

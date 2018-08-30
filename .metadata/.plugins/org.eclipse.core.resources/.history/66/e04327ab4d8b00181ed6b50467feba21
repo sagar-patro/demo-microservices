@@ -1,0 +1,6 @@
+package com.sagarp.employeejpa;
+
+public class RegistryController {
+	@Autowired
+private EmployeeRegistryService service;
+}

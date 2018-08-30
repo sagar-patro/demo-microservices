@@ -1,0 +1,6 @@
+package com.sagarp.meeting;
+
+@RestController
+public class MeetingController {
+
+}

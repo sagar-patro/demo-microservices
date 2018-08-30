@@ -1,0 +1,16 @@
+package com.sagarp.employeejpa;
+
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employeeregistry")
+public class EmployeeRegistry {
+	@Id
+	@GenerationValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	private String name;
+	private long salary;
+	private String depaartment;
+}

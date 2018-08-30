@@ -1,0 +1,40 @@
+package com.sagarp.meeting;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+//@CrossOrigin(origins = { "http://localhost:8085" })
+public class MeetingController {
+	@Autowired
+	private MeetingService meetingService;
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public List<Meeting> getAllMeetings() {
+		System.out.println("here");
+		List<Meeting> allMeetings;
+		allMeetings = meetingService.getAllMeetings();
+		return allMeetings;
+	}
+
+	@RequestMapping(value = "/save", method = RequestMethod.GET)
+	public String test() {
+
+		return "You know nothing Jon snow!";
+	}
+
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public Meeting saveMeeting(@RequestBody Meeting meeting) {
+//		if (meetingService.saveMeeting(meeting)) {
+//			return meeting;
+//		} else {
+//			return null;
+//		}
+		return null;
+	}
+}

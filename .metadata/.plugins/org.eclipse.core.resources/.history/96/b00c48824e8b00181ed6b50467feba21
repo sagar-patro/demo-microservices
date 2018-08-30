@@ -1,0 +1,17 @@
+package com.sagarp.employeejpa;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmployeeRegistryService {
+
+	@Autowired
+	private EmployeeRegistryRepository repository;
+	public List<EmployeeRegistry> getAllEmployees() {
+		
+		return null;
+	}
+
+}

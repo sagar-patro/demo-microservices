@@ -1,0 +1,6 @@
+package com.sagarp.employeejpa;
+
+@Service
+public class EmployeeRegistryService {
+
+}

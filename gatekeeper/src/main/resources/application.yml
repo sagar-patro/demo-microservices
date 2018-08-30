@@ -1,0 +1,22 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: gatekeeper
+    
+
+zuul:
+  routes:
+    meeting: /meeting/**
+    serviceId: meeting
+    
+ribbon:
+  eureka:
+    enabled: false
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+

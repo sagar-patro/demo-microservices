@@ -1,0 +1,9 @@
+package com.sagarp.employeejpa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+@RestController
+public class RegistryController {
+	@Autowired
+	private EmployeeRegistryService service;
+}

@@ -1,0 +1,66 @@
+package com.sagarp.meeting;
+
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "meeting")
+public class Meeting {
+	@Id
+	@GenerationValue(strategy = GenerationType.IDENTITY)
+	private long id;
+	private String name;
+	private String timing;
+	private int active;
+
+	public Meeting() {
+		super();
+	}
+
+	public Meeting(String name, String timing, int active) {
+		super();
+		this.name = name;
+		this.timing = timing;
+		this.active = active;
+	}
+
+	public Meeting(String name, String timing) {
+		super();
+		this.name = name;
+		this.timing = timing;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getTiming() {
+		return timing;
+	}
+
+	public void setTiming(String timing) {
+		this.timing = timing;
+	}
+
+	public int getActive() {
+		return active;
+	}
+
+	public void setActive(int active) {
+		this.active = active;
+	}
+
+}

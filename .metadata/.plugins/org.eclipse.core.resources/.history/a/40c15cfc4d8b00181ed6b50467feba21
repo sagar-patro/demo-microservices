@@ -1,0 +1,16 @@
+package com.sagarp.employeejpa;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class RegistryController {
+	@Autowired
+	private EmployeeRegistryService service;
+	
+	public List<EmployeeRegistry> getAllEmployees() {
+		List<EmployeeRegistry> employees;
+		
+		return employees;
+	}
+}

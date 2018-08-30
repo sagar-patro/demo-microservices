@@ -1,0 +1,9 @@
+package com.sagarp.meeting;
+
+@Service
+public class MeetingService {
+	@Autowired
+	private MeetingRepository repository;
+	
+
+}

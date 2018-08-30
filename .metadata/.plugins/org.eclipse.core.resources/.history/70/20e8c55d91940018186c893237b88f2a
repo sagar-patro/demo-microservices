@@ -1,0 +1,16 @@
+package com.sagarp.meeting;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MeetingController {
+	@Autowired
+	private MeetingService meetingService;
+
+	public List<Meeting> getAllMeetings() {
+		List<Meeting> allMeetings = new ArrayList<Meeting>();
+		allMeetings = meetingService.getAllMeetings();
+		return allMeetings;
+	}
+}

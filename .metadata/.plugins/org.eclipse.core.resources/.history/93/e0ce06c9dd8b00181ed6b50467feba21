@@ -1,0 +1,32 @@
+package com.sagarp.employeejpa;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class RegistryController {
+	@Autowired
+	private EmployeeRegistryService service;
+
+	public List<EmployeeRegistry> getAllEmployees() {
+		List<EmployeeRegistry> employees;
+		employees = service.getAllEmployees();
+		return employees;
+	}
+
+	public EmployeeRegistry getEmployeeById(int id) {
+		return service.getEmployeeById(id);
+	}
+
+	@RequestMapping(value = "/jpa/employee", method = RequestMethod.POST)
+	public String addEmployee(EmployeeRegistry emp) {
+
+		if (service.addEmployee(emp))
+			return "added";
+		else
+			return "failed to add";
+	}
+}
